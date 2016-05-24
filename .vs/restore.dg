@@ -1,1 +1,10 @@
-#:C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\HelloMvcApi\HelloMvcApi.xproj
+#:C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\SmallTalk.Repository\SmallTalk.Repository.xproj
+C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\SmallTalk.Repository\SmallTalk.Repository.xproj|C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\SmallTalk.Database\SmallTalk.Database.xproj
+C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\SmallTalk.Repository\SmallTalk.Repository.xproj|C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\SmallTalk.DomainModels\SmallTalk.DomainModels.xproj
+C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\SmallTalk.Database\SmallTalk.Database.xproj|C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\SmallTalk.DomainModels\SmallTalk.DomainModels.xproj
+#:C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\HelloMvcApi\SmallTalk.Api.xproj
+C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\HelloMvcApi\SmallTalk.Api.xproj|C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\SmallTalk.DomainModels\SmallTalk.DomainModels.xproj
+C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\HelloMvcApi\SmallTalk.Api.xproj|C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\SmallTalk.Repository\SmallTalk.Repository.xproj
+C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\SmallTalk.Repository\SmallTalk.Repository.xproj|C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\SmallTalk.Database\SmallTalk.Database.xproj
+C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\SmallTalk.Repository\SmallTalk.Repository.xproj|C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\SmallTalk.DomainModels\SmallTalk.DomainModels.xproj
+C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\SmallTalk.Database\SmallTalk.Database.xproj|C:\Users\Ciaran\Documents\work\scratch\CLI_Samples\cli-samples\SmallTalk.DomainModels\SmallTalk.DomainModels.xproj

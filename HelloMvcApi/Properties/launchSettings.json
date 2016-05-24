@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "HelloMvcApi": {
+      "commandName": "Project"
+    },
+    "SmallTalk.Api": {
+      "commandName": "Project"
+    }
+  }
+}

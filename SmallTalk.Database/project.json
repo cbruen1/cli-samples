@@ -1,0 +1,40 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    //"NETStandard.Library": "1.5.0-rc2-24027",
+    //"EntityFramework": "7.0.0-beta4"
+    //"EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
+    //"EntityFramework.Commands": "7.0.0-rc1-final"
+    //"Microsoft.EntityFrameworkCore.Tools": {
+    //  "type": "build",
+    //  "version": "1.0.0-preview1-final"
+    //},
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-rc2-final",
+    "NETStandard.Library": "1.5.0-rc2-24027",
+    "SmallTalk.DomainModels": "1.0.0-*"
+  },
+
+  "tools": {
+    "Microsoft.EntityFrameworkCore.Tools": {
+      "imports": [ "portable-net451+win8" ],
+      "version": "1.0.0-preview1-final"
+    }
+  },
+
+  "commands": {
+    "web": "Microsoft.AspNet.Server.Kestrel",
+    "ef": "EntityFramework.Commands"
+  },
+
+  "frameworks": {
+    //"dnx451": { }
+    //"dnxcore50": { }
+    "netstandard1.5": {
+      "imports": [
+        "dnxcore50",
+        "portable-net452+win81"
+      ]
+    }
+  }
+}

@@ -13,10 +13,18 @@
     "Microsoft.NETCore.App": {
       "type": "platform",
       "version": "1.0.0-rc2-3002702"
-    }
+    },
+    "SmallTalk.DomainModels": "1.0.0-*",
+    "SmallTalk.Repository": "1.0.0-*"
   },
   "frameworks": {
-    "netcoreapp1.0": { }
+    //"netcoreapp1.0": { }
+    "netcoreapp1.0": {
+      "imports": [
+        //"dnxcore50",
+        "portable-net452+win81"
+      ]
+    }
   },
   "tools": {
     "Microsoft.AspNetCore.Server.IISIntegration.Tools": {

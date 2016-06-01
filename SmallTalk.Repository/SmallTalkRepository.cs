@@ -23,17 +23,23 @@ namespace SmallTalk.Repository
 
         public ConversationStarter Find(long id)
         {
-            return _context.ConversationStarters.FirstOrDefault(c => c.Id == id);
+            var item = _context.ConversationStarters.FirstOrDefault(c => c.Id == id);
+
+            return item;
         }
 
         public ConversationStarter Find(string key)
         {
-            return _context.ConversationStarters.FirstOrDefault(c => c.Text.Contains(key));
+            var item = _context.ConversationStarters.FirstOrDefault(c => c.Text.Contains(key));
+
+            return item;
         }
 
         public IEnumerable<ConversationStarter> GetSampleList()
         {
-            return _context.ConversationStarters.Where(c => c.Id <= 20);
+            var list = _context.ConversationStarters.Where(c => c.Id <= 20);
+
+            return list;
         }
 
         public void Remove(long id)

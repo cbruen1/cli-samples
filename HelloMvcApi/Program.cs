@@ -2,7 +2,7 @@ using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
 
-namespace HelloMvcApi
+namespace SmallTalk.Api
 {
     public class Program
     {

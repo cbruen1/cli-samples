@@ -20,7 +20,9 @@ namespace SmallTalk.Api.Controllers
         [HttpGet]
         public IEnumerable<ConversationStarter> GetSampleList()
         {
-            return ConvStarterRepo.GetSampleList();
+            var list = ConvStarterRepo.GetSampleList();
+
+            return list;
         }
 
         // GET api/values/5

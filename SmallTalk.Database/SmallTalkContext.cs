@@ -8,10 +8,9 @@ namespace SmallTalk.Database
     {
         public DbSet<ConversationStarter> ConversationStarters { get; set; }
 
-        public SmallTalkContext() : base()
-        {
-
-        }
+        public SmallTalkContext(DbContextOptions<SmallTalkContext> options) 
+            : base(options)
+        { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

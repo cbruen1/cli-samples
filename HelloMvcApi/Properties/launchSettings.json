@@ -1,10 +1,13 @@
 {
   "profiles": {
-    "HelloMvcApi": {
-      "commandName": "Project"
-    },
     "SmallTalk.Api": {
       "commandName": "Project"
+    },
+    "web": {
+      "commandName": "web",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
     }
   }
 }

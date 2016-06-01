@@ -11,7 +11,7 @@ namespace SmallTalk.DomainModels
         public string Text { get; set; }
         public Languages Language { get; set; }
         public DateTimeOffset DateAdded { get; set; }
-        public DateTimeOffset DateUpdated { get; set; }
+        public DateTimeOffset? DateUpdated { get; set; }
     }
 
     public enum Languages

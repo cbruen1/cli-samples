@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SmallTalk.Api", "HelloMvcApi\SmallTalk.Api.xproj", "{54AB9124-0B67-46C7-BF17-61EC50C94233}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SmallTalk.Api", "SmallTalk.Api\SmallTalk.Api.xproj", "{54AB9124-0B67-46C7-BF17-61EC50C94233}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SmallTalk.Repository", "SmallTalk.Repository\SmallTalk.Repository.xproj", "{BF716F15-3B7D-45FB-A25D-48E23B099330}"
 EndProject

@@ -54,15 +54,24 @@ namespace SmallTalk.Api.Controllers
         }
 
         // POST api/values
-        [HttpPost]
-        public IActionResult Create([FromBody]ConversationStarter item)
+        //[HttpPost]
+        //public IActionResult Create([FromBody]ConversationStarter item)
+        //[ValidateAntiForgeryToken]
+        public IActionResult Create([Bind("Text", "Language")][FromBody]ConversationStarter item)
         {
             if (item == null)
             {
                 return new BadRequestResult();
             }
 
-            ConvStarterRepo.Add(item);
+            var itemDomain = new ConversationStarter()
+            {
+                DateAdded = item.DateAdded,
+                Language = item.Language,
+                Text = item.Text
+            };
+
+            ConvStarterRepo.Add(itemDomain);
 
             //var result = CreatedAtRouteResult("GetConvStarter", new { Controller = "ConvStarter", id = item.Id }, item);
             var result = Create(item);

@@ -1,11 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-
-using SmallTalk.DomainModels;
 using SmallTalk.Repository;
 using SmallTalk.Database;
 
@@ -18,6 +14,7 @@ namespace SmallTalk.Api
             var connection = @"Server=(localdb)\mssqllocaldb;Database=SmallTalk;Trusted_Connection=True;";
 
             services
+                .AddCors()
                 .AddMvcCore()
                 .AddJsonFormatters();
 
@@ -33,6 +30,7 @@ namespace SmallTalk.Api
         {
             loggerFactory.AddConsole(LogLevel.Debug);
 
+            app.UseCors(builder => builder.AllowAnyOrigin());
             app.UseMvc();
         }
     }

@@ -2,31 +2,21 @@ var app;
 (function (app) {
     var convstarters;
     (function (convstarters) {
-        var ConvStarterController = (function () {
-            function ConvStarterController() {
+        var ConvStarterListController = (function () {
+            function ConvStarterListController(dataAccessService) {
+                var _this = this;
+                this.dataAccessService = dataAccessService;
                 this.title = "SmallTalk";
-                this.convstarters = [
-                    {
-                        "Id": 1,
-                        "Text": "What time do you call this?",
-                        "Language": "English"
-                    },
-                    {
-                        "Id": 2,
-                        "Text": "Was machst du?",
-                        "Language": "German"
-                    },
-                    {
-                        "Id": 3,
-                        "Text": "Ca va?",
-                        "Language": "French"
-                    }];
-                var convstarter = new app.domain.ConvStarter(4, "Como estas?", "Spanish");
-                this.convstarters.push(convstarter);
+                this.convstarters = [];
+                var convStarterResource = dataAccessService.getConvResource();
+                convStarterResource.query(function (data) {
+                    _this.convstarters = data;
+                });
             }
-            return ConvStarterController;
+            ConvStarterListController.$inject = ["dataAccessService"];
+            return ConvStarterListController;
         }());
-        angular.module("app").controller("ConvStarterCtrl", ConvStarterController);
+        angular.module("app").controller("ConvStarterListCtrl", ConvStarterListController);
     })(convstarters = app.convstarters || (app.convstarters = {}));
 })(app || (app = {}));
 //# sourceMappingURL=ConvStarterController.js.map

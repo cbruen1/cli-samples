@@ -1,7 +1,8 @@
 ﻿module app.navigation {
+
     interface IMenuItem {
         href: string;
-        name: string;
+        name: string;        
     }
 
     interface INavigationController {
@@ -18,7 +19,7 @@
             this.index = 0;
             this.menu = [
                 { "href": "#", "name": "Home" },
-                { "href": "#", "name": "Stores" },
+                { "href": "#", "name": "Conversation Starter List" },
             ];
         }
 

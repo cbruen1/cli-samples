@@ -1,0 +1,27 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        <h4 class="page-header">{{::vm.convStarter.Text}}</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+    </div>
+    <div class="col-md-4">
+        <ul class="nav nav-tabs">
+            <li ng-click="vm.setTab(0)" ng-class="(vm.tab == 0) ? 'active' : ''"><a>Details</a></li>
+            <li ng-click="vm.setTab(1)" ng-class="(vm.tab == 1) ? 'active' : ''"><a>Languages</a></li>
+        </ul>
+        <div class="tab-content" ng-show="(vm.tab == 0)">
+            <div class="label label-default">Date added:</div>
+            <h3>{{vm.convStarter.DateAdded | date:'medium'}}</h3>
+            <div class="label label-default">Date updated:</div>
+            <h3>{{vm.convStarter.DateUpdated | date:'medium'}}</h3>
+        </div>
+        <div class="tab-content" ng-show="(vm.tab == 1)">
+            <div class="label label-default">Home page</div>
+            <h3><a href="{{vm.store.StoreUrl}}">{{vm.store.StoreUrl}}</a></h3>
+            <div class="label label-default">Email</div>
+            <h3><a href="mailto:{{vm.store.Email}}">{{vm.store.Email}}</a></h3>
+        </div>
+    </div>
+</div>

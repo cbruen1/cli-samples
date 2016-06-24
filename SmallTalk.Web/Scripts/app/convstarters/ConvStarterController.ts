@@ -1,36 +1,23 @@
 ﻿module app.convstarters { 
-    interface IConvStarterController {
+    interface IConvStarterListController {
         title: string;
         convstarters: app.domain.IConvStarter[];
     }
 
-    class ConvStarterController implements IConvStarterController {
+    class ConvStarterListController implements IConvStarterListController {
         title: string;
         convstarters: app.domain.IConvStarter[];
 
-        constructor() {
+        static $inject = ["dataAccessService"];
+        constructor(private dataAccessService: app.common.services.DataAccessService) {
             this.title = "SmallTalk";
-            this.convstarters = [
-                {
-                    "Id": 1,
-                    "Text": "What time do you call this?",
-                    "Language": "English"
-                },
-                {
-                    "Id": 2,
-                    "Text": "Was machst du?",
-                    "Language": "German"
-                },
-                {
-                    "Id": 3,
-                    "Text": "Ca va?",
-                    "Language": "French"
-                }];
-
-            var convstarter = new app.domain.ConvStarter(4, "Como estas?", "Spanish");
-            this.convstarters.push(convstarter);
+            this.convstarters = [];
+            const convStarterResource = dataAccessService.getConvResource();
+            convStarterResource.query((data: app.domain.IConvStarter[]) => {
+                this.convstarters = data;
+            });
         }
     }
 
-    angular.module("app").controller("ConvStarterCtrl", ConvStarterController);
+    angular.module("app").controller("ConvStarterListCtrl", ConvStarterListController);
 }

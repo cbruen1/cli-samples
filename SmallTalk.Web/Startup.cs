@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Hosting.Server.Features;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,10 +22,7 @@ namespace SmallTalk.Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app)
         {
-            //app.Run(async (context) =>
-            //{
-            //    //await context.Response.WriteAsync("Hello World, greetings from your favourite conversation app!");
-            //});
+            app.UseStaticFiles();
         }
     }
 }

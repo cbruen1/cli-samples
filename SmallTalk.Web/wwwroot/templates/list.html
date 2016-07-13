@@ -11,7 +11,7 @@
     <br />
     <div class="row">
         <div ng-repeat="starter in vm.starters | orderBy: 'Text' | starterSearch: starter.search" class="col-sm-3 col-xs-6">
-            <h4><a href="#starterdetails/{{starter.Id}}">{{starter.Text}}</a></h4>
+            <h4><a href="#details/{{starter.Id}}">{{starter.Text}}</a></h4>
         </div>
     </div>
 </div>

@@ -13,11 +13,18 @@ var app;
             templateUrl: "/templates/random.html",
             controller: "RandomStarterCtrl as vm"
         })
-            .when("/list", {
+            .when("/starterlist", {
             templateUrl: "/templates/list.html",
             controller: "ListStarterCtrl as vm"
         })
-            .when("/details/:id", {
+            .when('/starterlist/create', {
+            templateUrl: 'templates/edit.html',
+            controller: "StarterController as vm",
+            resolve: {
+                editMode: function () { return false; }
+            }
+        })
+            .when("/starterdetails/:id", {
             templateUrl: "/templates/details.html",
             controller: "DetailStarterCtrl as vm"
         })

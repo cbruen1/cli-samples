@@ -1,11 +1,11 @@
 ﻿module app.domain {
-    export interface IConvStarter {
+    export interface IStarter {
         Id: number;
         Text: string;
         Language: string;
     }
 
-    export class ConvStarter implements IConvStarter {
+    export class Starter implements IStarter {
         constructor(
             public Id: number,
             public Text: string,

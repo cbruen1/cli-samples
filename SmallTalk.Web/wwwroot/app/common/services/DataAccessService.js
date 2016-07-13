@@ -8,7 +8,7 @@ var app;
                 function DataAccessService($resource) {
                     this.$resource = $resource;
                 }
-                DataAccessService.prototype.getConvResource = function () {
+                DataAccessService.prototype.getStarterResource = function () {
                     return this.$resource("http://localhost:1112/api/convstarter/:id");
                 };
                 // minification protection

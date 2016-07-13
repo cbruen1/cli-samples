@@ -6,8 +6,9 @@ var app;
             function NavigationController() {
                 this.index = 0;
                 this.menu = [
-                    { "href": "#", "name": "Home" },
-                    { "href": "#", "name": "Conversation Starter List" },
+                    { "href": "#/", "name": "Home" },
+                    { "href": "#/list", "name": "See more starters" },
+                    { "href": "#", "name": "Choose language" }
                 ];
             }
             NavigationController.prototype.setIndex = function (value) {

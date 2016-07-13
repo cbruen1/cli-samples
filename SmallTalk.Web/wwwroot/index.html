@@ -1,58 +1,57 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <!--Add google fonts-->
-    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200' rel='stylesheet' type='text/css'>
-    <!--Add font awesome-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <!--Add bootstrap-->
-    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="css/site.css" />
-    <title>Welcome To SmallTalk</title>
-</head>
-<body ng-app="app">
-    <ng-include src="'templates/header.html'"></ng-include>
-    <div class="container">
+    <head>
+        <meta charset="utf-8" />
+        <!--Add google fonts-->
+        <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200' rel='stylesheet' type='text/css'>
+        <!--Add font awesome-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css" />
+        <!--Add bootstrap-->
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="css/site.css" />
+        <title>Welcome To SmallTalk</title>
+    </head>
+    <body ng-app="app">
+        <ng-include src="'templates/header.html'"></ng-include>
+        <div class="container">
         
-        <!-- content-->
-        <ng-view></ng-view>
-        <!--<ng-include src="'templates/convstarterlist.html'"></ng-include>-->
+            <!-- content-->
+            <ng-view autoscroll="true"></ng-view>
 
-        <!-- Footer -->
-        <hr />
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; SmallTalk 2016 -- all images are from <a href="http://www.unsplash.com">http://www.unsplash.com</a></p>
+            <!-- Footer -->
+            <hr />
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright &copy; SmallTalk 2016 -- all images are from <a href="http://www.unsplash.com">http://www.unsplash.com</a></p>
+                    </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
 
-    </div>
+        </div>
 
-    <!-- library scripts -->
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-resource/angular-resource.js"></script>
-    <script src="lib/angular-route/angular-route.js"></script>
+        <!-- library scripts -->
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular-resource/angular-resource.js"></script>
+        <script src="lib/angular-route/angular-route.js"></script>
 
-    <!-- app scripts -->
-    <script src="app/app.js"></script>
+        <!-- app scripts -->
+        <script src="app/app.js"></script>
 
-    <!-- domain classes -->
-    <script src="app/domain/ConvStarter.js"></script>
+        <!-- domain classes -->
+        <script src="app/domain/Starter.js"></script>
 
-    <!-- services -->
-    <script src="app/common/services/common.services.js"></script>
-    <script src="app/common/services/DataAccessService.js"></script>
+        <!-- services -->
+        <script src="app/common/services/common.services.js"></script>
+        <script src="app/common/services/DataAccessService.js"></script>
 
-    <!-- filters and directives -->
-    <script src="app/convstarters/ConvStarterFilter.js"></script>
+        <!-- filters and directives -->
+        <script src="app/convstarters/StarterFilter.js"></script>
 
-    <!-- controllers -->
-    <script src="app/navigation/NavigationController.js"></script>
-    <script src="app/convstarters/ConvStarterController.js"></script>
-    <script src="app/convstarters/ConvStarterDetailController.js"></script>
-
-</body>
+        <!-- controllers -->
+        <script src="app/navigation/NavigationController.js"></script>
+        <script src="app/convstarters/ListStarterController.js"></script>
+        <script src="app/convstarters/DetailStarterController.js"></script>
+        <script src="app/convstarters/RandomStarterController.js"></script>
+    </body>
 </html>

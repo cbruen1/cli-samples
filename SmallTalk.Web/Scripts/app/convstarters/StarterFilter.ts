@@ -1,17 +1,16 @@
 ﻿module app.filters {
-    export function ConvStarterSearch() {
-        return function (items: app.domain.IConvStarter[], search: string): app.domain.IConvStarter[] {
+    export function StarterSearch() {
+        return function (items: app.domain.IStarter[], search: string): app.domain.IStarter[] {
             var filtered = [];
             if (!search) { return items; }
             angular.forEach(items, function (item) {
-
                 if (angular.lowercase(item.Text).indexOf(angular.lowercase(search)) != -1) {
                     filtered.push(item);
                 }
-
             });
+
             return filtered;
         }
     }
-    angular.module("app").filter("convStarterSearch", ConvStarterSearch);
+    angular.module("app").filter("starterSearch", StarterSearch);
 }

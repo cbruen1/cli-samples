@@ -1,8 +1,8 @@
 ﻿module app.common.services {
-    interface IConvStarterResource extends ng.resource.IResource<app.domain.IConvStarter> { } 
+    interface IStarterResource extends ng.resource.IResource<app.domain.IStarter> { } 
 
     interface IDataAccessService {
-        getConvResource(): ng.resource.IResourceClass<IConvStarterResource>;
+        getStarterResource(): ng.resource.IResourceClass<IStarterResource>;
     }
 
     export class DataAccessService implements IDataAccessService {
@@ -10,7 +10,7 @@
         static $inject = ["$resource"];
         constructor(private $resource: ng.resource.IResourceService) { }
 
-        getConvResource(): ng.resource.IResourceClass<IConvStarterResource> {
+        getStarterResource(): ng.resource.IResourceClass<IStarterResource> {
             return this.$resource("http://localhost:1112/api/convstarter/:id");
         }
     }

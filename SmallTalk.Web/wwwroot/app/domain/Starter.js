@@ -2,15 +2,15 @@ var app;
 (function (app) {
     var domain;
     (function (domain) {
-        var ConvStarter = (function () {
-            function ConvStarter(Id, Text, Language) {
+        var Starter = (function () {
+            function Starter(Id, Text, Language) {
                 this.Id = Id;
                 this.Text = Text;
                 this.Language = Language;
             }
-            return ConvStarter;
+            return Starter;
         }());
-        domain.ConvStarter = ConvStarter;
+        domain.Starter = Starter;
     })(domain = app.domain || (app.domain = {}));
 })(app || (app = {}));
-//# sourceMappingURL=ConvStarter.js.map
+//# sourceMappingURL=Starter.js.map

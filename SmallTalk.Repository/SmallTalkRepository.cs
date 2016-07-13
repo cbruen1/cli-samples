@@ -35,9 +35,9 @@ namespace SmallTalk.Repository
             return item;
         }
 
-        public IEnumerable<ConversationStarter> GetSampleList()
+        public IEnumerable<ConversationStarter> GetStarterList()
         {
-            var list = _context.ConversationStarters.Where(c => c.Id <= 20);
+            var list = _context.ConversationStarters.Take(250);
 
             return list;
         }

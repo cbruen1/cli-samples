@@ -17,15 +17,16 @@ namespace SmallTalk.Api.Controllers
 
         // GET: api/values
         [HttpGet]
-        public IEnumerable<ConversationStarter> GetSampleList()
+        public IEnumerable<ConversationStarter> GetStarterList()
         {
-            var list = ConvStarterRepo.GetSampleList();
+            var list = ConvStarterRepo.GetStarterList();
 
             return list;
         }
 
         // GET api/values/5
-        [HttpGet("{id}", Name = "GetConvStarter")]
+        // [Route("api/convstarter/id")]
+        [HttpGet("{id}", Name = "GetConvStarterById")]
         public IActionResult GetById(long id)
         {
             var item = ConvStarterRepo.Find(id);
@@ -38,9 +39,10 @@ namespace SmallTalk.Api.Controllers
             return new ObjectResult(item);
         }
 
-        // GET api/values/5
-        [HttpGet("{key}")]
-        public IActionResult GetById(string key)
+        // GET api/values/abc
+        // [Route("api/convstarter/key")]
+        [HttpGet("{key}", Name = "GetConvStarterByString")]
+        public IActionResult GetByKey(string key)
         {
             var item = ConvStarterRepo.Find(key);
 
@@ -50,32 +52,6 @@ namespace SmallTalk.Api.Controllers
             }
 
             return new ObjectResult(item);
-        }
-
-        // POST api/values
-        //[HttpPost]
-        //public IActionResult Create([FromBody]ConversationStarter item)
-        //[ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("Text", "Language")][FromBody]ConversationStarter item)
-        {
-            if (item == null)
-            {
-                return new BadRequestResult();
-            }
-
-            var itemDomain = new ConversationStarter()
-            {
-                DateAdded = item.DateAdded,
-                Language = item.Language,
-                Text = item.Text
-            };
-
-            ConvStarterRepo.Add(itemDomain);
-
-            //var result = CreatedAtRouteResult("GetConvStarter", new { Controller = "ConvStarter", id = item.Id }, item);
-            var result = Create(item);
-
-            return result;
         }
 
         // PUT api/values/5
@@ -105,6 +81,29 @@ namespace SmallTalk.Api.Controllers
         public void Delete(long id)
         {
             ConvStarterRepo.Remove(id);
+        }
+
+        // POST api/values
+        //public IActionResult Create([FromBody]ConversationStarter item)
+        //[ValidateAntiForgeryToken]
+        [HttpPost]
+        public IActionResult Create([Bind("Text", "Language")][FromBody] ConversationStarter item)
+        {
+            if (item == null)
+            {
+                return new BadRequestResult();
+            }
+
+            var itemDomain = new ConversationStarter()
+            {
+                DateAdded = item.DateAdded,
+                Language = item.Language,
+                Text = item.Text
+            };
+
+            ConvStarterRepo.Add(itemDomain);
+
+            return new CreatedAtRouteResult("GetConvStarterById", new { controller = "ConvStarter", id = item.Id }, item);
         }
     }
 }

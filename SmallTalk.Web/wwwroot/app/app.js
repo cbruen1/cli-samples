@@ -9,15 +9,19 @@ var app;
     routeConfig.$inject = ["$routeProvider"];
     function routeConfig($routeProvider) {
         $routeProvider
-            .when("/convStarterList", {
-            templateUrl: "/templates/convstarterlist.html",
-            controller: "ConvStarterListCtrl as vm"
+            .when("/", {
+            templateUrl: "/templates/random.html",
+            controller: "RandomStarterCtrl as vm"
         })
-            .when("/convStarterDetails/:id", {
-            templateUrl: "/templates/convstarterdetails.html",
-            controller: "ConvStarterDetailCtrl as vm"
+            .when("/list", {
+            templateUrl: "/templates/list.html",
+            controller: "ListStarterCtrl as vm"
         })
-            .otherwise("/convStarterList");
+            .when("/details/:id", {
+            templateUrl: "/templates/details.html",
+            controller: "DetailStarterCtrl as vm"
+        })
+            .otherwise({ redirectTo: "/index" });
     }
 })(app || (app = {}));
 //# sourceMappingURL=app.js.map

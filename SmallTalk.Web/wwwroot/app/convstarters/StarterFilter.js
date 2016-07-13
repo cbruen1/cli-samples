@@ -2,7 +2,7 @@ var app;
 (function (app) {
     var filters;
     (function (filters) {
-        function ConvStarterSearch() {
+        function StarterSearch() {
             return function (items, search) {
                 var filtered = [];
                 if (!search) {
@@ -16,8 +16,8 @@ var app;
                 return filtered;
             };
         }
-        filters.ConvStarterSearch = ConvStarterSearch;
-        angular.module("app").filter("convStarterSearch", ConvStarterSearch);
+        filters.StarterSearch = StarterSearch;
+        angular.module("app").filter("starterSearch", StarterSearch);
     })(filters = app.filters || (app.filters = {}));
 })(app || (app = {}));
-//# sourceMappingURL=ConvStarterFilter.js.map
+//# sourceMappingURL=StarterFilter.js.map
